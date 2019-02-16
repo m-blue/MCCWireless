@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/txtTitle"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/rg1"
+        android:layout_width="373dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/txtOfferTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/txtOfferTitle1">
+
+        <TextView
+            android:id="@+id/txtOfferDesc1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtOfferDescription1"
+            tools:layout_editor_absoluteX="162dp"
+            tools:layout_editor_absoluteY="511dp" />
+
+        <RadioButton
+            android:id="@+id/rbOffer1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbOffer1" />
+
+        <RadioButton
+            android:id="@+id/rbDecline1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbDecline" />
+
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg2"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/rg1"
+        app:layout_constraintTop_toBottomOf="@+id/txtOfferTitle2">
+
+        <TextView
+            android:id="@+id/txtOfferDesc2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtOfferDescription2"
+            tools:layout_editor_absoluteX="90dp"
+            tools:layout_editor_absoluteY="448dp" />
+
+        <RadioButton
+            android:id="@+id/rbOffer2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbOffer2"
+            tools:layout_editor_absoluteX="204dp"
+            tools:layout_editor_absoluteY="222dp" />
+
+        <RadioButton
+            android:id="@+id/rbDecline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbDecline" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rg3"
+        android:layout_width="381dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/rg1"
+        app:layout_constraintTop_toBottomOf="@+id/txtOfferTitle3">
+
+        <TextView
+            android:id="@+id/txtOfferDesc3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/txtOfferDescription3"
+            tools:layout_editor_absoluteX="56dp"
+            tools:layout_editor_absoluteY="581dp" />
+
+        <RadioButton
+            android:id="@+id/rbOffer3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/rbOffer3"
+            tools:layout_editor_absoluteX="35dp"
+            tools:layout_editor_absoluteY="212dp" />
+
+        <RadioButton
+            android:id="@+id/rbDecline3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/rbDecline" />
+    </RadioGroup><![CDATA[
+
+
+        " />
+
+
+
+
+
+    ]]>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtResult"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:textSize="26sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rg3" />
+
+    <TextView
+        android:id="@+id/txtOfferTitle1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/txtOfferTitle1"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitle" />
+
+    <TextView
+        android:id="@+id/txtOfferTitle2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/txtOfferTitle2"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtOfferTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/rg1" />
+
+    <TextView
+        android:id="@+id/txtOfferTitle3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/txtOfferTitle3"
+        android:textColor="@android:color/black"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/txtOfferTitle1"
+        app:layout_constraintTop_toBottomOf="@+id/rg2" />
+
+    <TextView
+        android:id="@+id/txtPrice1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:text="@string/txtPrice1"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOfferTitle1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.76"
+        app:layout_constraintStart_toEndOf="@+id/txtOfferTitle1"
+        app:layout_constraintTop_toTopOf="@+id/txtOfferTitle1" />
+
+    <TextView
+        android:id="@+id/txtPrice2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtPrice2"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOfferTitle2"
+        app:layout_constraintStart_toStartOf="@+id/txtPrice1"
+        app:layout_constraintTop_toTopOf="@+id/txtOfferTitle2" />
+
+    <TextView
+        android:id="@+id/txtPrice3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/txtPrice3"
+        app:layout_constraintBottom_toBottomOf="@+id/txtOfferTitle3"
+        app:layout_constraintStart_toStartOf="@+id/txtPrice1"
+        app:layout_constraintTop_toTopOf="@+id/txtOfferTitle3" />
+
+</android.support.constraint.ConstraintLayout>

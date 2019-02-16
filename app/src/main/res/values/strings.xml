@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">MCC Wireless</string>
+    <string name="txtTitle">Network Offers</string>
+    <string name="rbOffer1">Standard Calls</string>
+    <string name="rbOffer2">4G Data</string>
+    <string name="rbOffer3">Unlimited Text</string>
+    <string name="rbDecline">Decline</string>
+    <string name="txtOfferTitle1">Standard Calls</string>
+    <string name="txtOfferTitle2">4G Data</string>
+    <string name="txtOfferTitle3">Unlimited Text</string>
+    <string name="txtOfferDescription1">Standard Plan. Can make and receive calls\n</string>
+    <string name="txtOfferDescription2">Can surf the web anywhere with our 4G Data plan\n</string>
+    <string name="txtOfferDescription3">Unlimited Text allows you to send all the \nwinking face emojis you want\n</string>
+    <string name="txtPrice1">$ 29.99/mon</string>
+    <string name="txtPrice2">$ 39.99/mon</string>
+    <string name="txtPrice3">$ 19.99/mon</string>
+</resources>
