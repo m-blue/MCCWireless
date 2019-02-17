@@ -1,7 +1,10 @@
 package com.example.mccwireless;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -9,12 +12,17 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import java.text.DecimalFormat;
+
 public class MainActivity extends AppCompatActivity {
 
     boolean applyDiscount = false;
+    double discountPercentage = 0.10;
     double price1 = 29.99,
         price2 = 39.99,
         price3 = 19.99;
+
+    DecimalFormat df = new DecimalFormat("#.##");
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,32 +59,46 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
-
+        Button btnPurchase = findViewById(R.id.btnPurchase);
+        btnPurchase.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(!rbOffer1.isChecked() && !rbOffer2.isChecked() && !rbOffer3.isChecked()){
+                    Toast.makeText(MainActivity.this, "You must select at least one offer",Toast.LENGTH_LONG).show();
+                }
+                else {
+                    startActivity(new Intent(MainActivity.this, CongratesMessage.class));
+                }
+            }
+        });
     }
+
     void CalculateCosts(RadioButton rb1, RadioButton rb2, RadioButton rb3){
         double totalCost = 0;
         String totalCostString;
         TextView txtResult = findViewById(R.id.txtResult);
         if(rb1.isChecked()){
-            //Add the cost of rb to total
             totalCost += price1;
-            //check if the discount applies
-            // print total
+            applyDiscount = ApplyDiscount(rb2, rb3);
         }
         if(rb2.isChecked()){
             totalCost += price2;
+            applyDiscount = ApplyDiscount(rb1, rb3);
         }
         if(rb3.isChecked()){
             totalCost += price3;
+            applyDiscount = ApplyDiscount(rb2, rb1);
         }
-        totalCostString = Double.toString(totalCost);
-        txtResult.setText(totalCostString);
+        if(applyDiscount){
+            totalCost = totalCost - (totalCost * discountPercentage);
+        }
+        txtResult.setText("$" + df.format(totalCost) + "/mon");
     }
 
-    double ApplyOffer(RadioButton rb){
-        Toast.makeText(MainActivity.this, rb.getText().toString() + " was DEselected",Toast.LENGTH_LONG).show();
-        return 0;
+    boolean ApplyDiscount(RadioButton rb1, RadioButton rb2){
+        if(rb1.isChecked() || rb2.isChecked()){
+            return true;
+        }
+        return false;
     }
 }
