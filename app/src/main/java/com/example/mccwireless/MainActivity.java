@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                 rbOffer2 = findViewById(R.id.rbOffer2),
                 rbOffer3 = findViewById(R.id.rbOffer3);
 
-
         RadioGroup rg1 = findViewById(R.id.rg1),
                 rg2 = findViewById(R.id.rg2),
                 rg3 = findViewById(R.id.rg3);
@@ -63,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         btnPurchase.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!rbOffer1.isChecked() && !rbOffer2.isChecked() && !rbOffer3.isChecked()){
+                if(!rbOffer1.isChecked() && !rbOffer2.isChecked() && !rbOffer3.isChecked()){ // Checks to make sure the user selects at least one of the offers
                     Toast.makeText(MainActivity.this, "You must select at least one offer",Toast.LENGTH_LONG).show();
                 }
                 else {
@@ -73,9 +72,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Adds up total cost of offers selected
+    // applies discount on offers if applicable
     void CalculateCosts(RadioButton rb1, RadioButton rb2, RadioButton rb3){
         double totalCost = 0;
-        String totalCostString;
         TextView txtResult = findViewById(R.id.txtResult);
         if(rb1.isChecked()){
             totalCost += price1;
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
         txtResult.setText("$" + df.format(totalCost) + "/mon");
     }
 
+    // Checks to see if more than one offer was selected
     boolean ApplyDiscount(RadioButton rb1, RadioButton rb2){
         if(rb1.isChecked() || rb2.isChecked()){
             return true;

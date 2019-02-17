@@ -16,4 +16,5 @@
     <string name="txtPrice3">$ 19.99/mon</string>
     <string name="btnPurchase">CONFIRM</string>
     <string name="txtCongrats">Congratulations for switching to MCC Wireless Network</string>
+    <string name="txtDiscount">10% discount on two or more offers</string>
 </resources>
